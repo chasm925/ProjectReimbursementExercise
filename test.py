@@ -1,6 +1,7 @@
-import app
 import unittest
 from datetime import date
+
+import app
 from project import Project
 from constant import *
 
@@ -12,6 +13,7 @@ class Tests(unittest.TestCase):
         ]
 
         reimbursement = app.calc_reimbursement(project_set=project_set)
+        print('Reimbursement for set 1 is ${}'.format(reimbursement))
         self.assertEqual(reimbursement, 165)
 
     def test_set_2(self):
@@ -22,6 +24,7 @@ class Tests(unittest.TestCase):
         ]
 
         reimbursement = app.calc_reimbursement(project_set=project_set)
+        print('Reimbursement for set 2 is ${}'.format(reimbursement))
         self.assertEqual(reimbursement, 590)
 
     def test_set_3(self):
@@ -32,6 +35,7 @@ class Tests(unittest.TestCase):
         ]
 
         reimbursement = app.calc_reimbursement(project_set=project_set)
+        print('Reimbursement for set 3 is ${}'.format(reimbursement))
         self.assertEqual(reimbursement, 445)
 
     def test_set_4(self):
@@ -43,6 +47,7 @@ class Tests(unittest.TestCase):
         ]
 
         reimbursement = app.calc_reimbursement(project_set=project_set)
+        print('Reimbursement for set 4 is ${}'.format(reimbursement))
         self.assertEqual(reimbursement, 185)
 
 if __name__ == '__main__':

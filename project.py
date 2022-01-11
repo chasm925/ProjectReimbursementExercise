@@ -6,3 +6,9 @@ class Project:
         self.start_date = start_date
         self.end_date = end_date
         self.city_type = city_type
+
+    def is_active(self, date):
+        """
+        returns true if date is within start and end date of project
+        """
+        return self.start_date <= date <= self.end_date
